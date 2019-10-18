@@ -24,7 +24,7 @@ npm install tunit --save-dev
 
 ##### The following code uses typescript
 
-- First of all, you'd better create a entity class **TheTest.ts** 
+- First of all, you'd better create a entity class **TUnitTest.ts** 
 
 	> The file name can't named "Test". 
 
@@ -93,7 +93,7 @@ next(result?:any, assert?:any):void
 - Finally, to run this file.
 
 ```javascript
-ts-node ./TheTest.ts
+ts-node ./TUnitTest.ts
 ```
 
 
