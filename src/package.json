@@ -1,0 +1,26 @@
+{
+  "name": "tunit",
+  "version": "1.0.2",
+  "description": "The node.js coding test plugin，it is similar to junit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "junit",
+    "test",
+    "unit",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyspace/tunit.git"
+  },
+  "author": "EvanZheng",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.7.12"
+  },
+  "types": "index.d.ts"
+}

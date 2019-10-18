@@ -1,7 +1,7 @@
 {
   "name": "tunit",
-  "version": "1.0.0",
-  "description": "The node.js version of code test plugin，it is similar to junit",
+  "version": "1.0.2",
+  "description": "The node.js coding test plugin，it is similar to junit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,6 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^12.7.12"
-  }
+  },
+  "types": "index.d.ts"
 }
