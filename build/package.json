@@ -1,6 +1,6 @@
 {
   "name": "tunit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The node.js coding test plugin，it is similar to junit",
   "main": "index.js",
   "scripts": {
