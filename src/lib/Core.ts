@@ -96,18 +96,27 @@ export default class Core {
 		return 'Runs:'+(this.successNum+this.failNum+this.errorNum)+'    Successes:'+(this.successNum)+'    Failures:'+this.failNum+'    Errors:'+this.errorNum;
 	}
 	private appendLog() {
-		const res =this.getResultNum();
+		const t = this,
+			res =t.getResultNum();
+		let wData = null;
 		if(Core.tunit.targetAbsPath) {
-			this.logMsgList.push(res);
-			this.logMsgList.push('\n\n');
+			t.logMsgList.push(res);
+			t.logMsgList.push('\n\n');
 			const path = this.getPath(Core.tunit.targetAbsPath);
-			fs.appendFile(path, this.logMsgList.join('\n'), function (err) {
-		        if (err) {
-		            throw err;
-		        } 
-		        console.log(res);
-		        console.log('The log file name is '+'tunit.log')
-		    });
+			fs.readFile(path, {encoding:'utf-8', flag:'a+'}, function (err, data) {
+			    if(err) {
+			        console.error(err);
+			    } 
+			    else {
+					const wData = t.logMsgList.join('\n') + data
+			        fs.writeFile(path, wData, (err) => {
+					  if(err) {
+					  	 console.error(err);
+					  }
+					  console.log('The log file name is '+'tunit.log');
+					});
+			    }
+			});
 		}
 		else {
 			console.log(res);
